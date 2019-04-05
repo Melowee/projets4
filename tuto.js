@@ -41,7 +41,7 @@ function tuto() {
           position: 'bottom'
         },
         {
-          element: '#infoParametres',
+          element: '#infoSettings',
           intro: 'If you want you can retry with an other vehicles capacity !',
           position: 'bottom'
         }
