@@ -31,7 +31,7 @@ function tuto() {
           position: 'bottom'
         },
         {
-          element: '#resultats',
+          element: '#results',
           intro: 'The values of the clicked node have just changed.',
           position: 'bottom'
         },
