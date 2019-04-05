@@ -164,8 +164,7 @@ function chercheResultats() {
 		if (eq(cli, tab)) {
 			solutionNbTrucks = jsonIssuesQ.solutions[i].solution.trucks_number;
 			solutionDetails = jsonIssuesQ.solutions[i].solution.trucks_routing;
-			document.getElementById("nbTrucks").innerHTML = solutionNbTrucks;
-			document.getElementById("SolutionDetails").innerHTML = solutionDetails;
+
 		}
 	}
 	displaySolution(); // Call displaySolution() to display the new graph with the new solution
