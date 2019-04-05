@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>CVRP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
+
+</head>
+<body>
+
+  <div id="global">
+    <div id="header">
+      <div id="ButtonBar">
+        <button onClick="document.getElementById('footer').scrollIntoView();" class="w3-button w3-pale-blue w3-tiny">Vehicules size</button>
+        <button onClick="tuto()" class="w3-button w3-pale-blue w3-tiny">?</button>
+      </div>
+      <h1 id="title">CVRP</h1>
+      <h2 id="subtitle">A web demonstrator for the Capacitated Vehicule Routing Problem</h2>
+    </div>
+
+    <div id="network"></div>
+    <div id="draggable" class="ui-widget-content">
+      <div id="mydivheader">Click on a client to edit his demande</div>
+        <div id="conteneur">
+          <div id="slidecontainer">
+            Client n° <span id="idNodeClick"></span>
+
+              <div class="range-slider">
+                <div class="slider-range" id="myRange">
+              </div>
+            </div>
+              Value : <span id="valueNodeClick"></span><br>
+              <p><button id="buttonValidation" onclick="addClientsQuantite()" class="w3-button w3-tiny ">Validate</button></p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div id="results">
+    <table class="firstTable w3-table-all w3-centered">
+      <tr id="NodeName"></tr>
+      <tr id="NodeValues"></tr>
+    </table>
+     <span id="nbTrucks"></span><span id="SolutionDetails"></span>
+  </div>
+
+
+  <div id="footer">
+    <div id="panelSlider">
+      <div id="text">
+        <h1>What is CVRP ?</h1>
+        <p>The cvrp is a Javascript program that consists of finding the minimum number of vehicles and the route they will have to follow in order to ensure the collection/distribution of customers' goods.</p>
+      </div>
+      <div id="infoSettings">
+        <h3 id="titleInfo">Global settings</h3>
+        <div id="info">
+          <h4>Maximal load : <span id="MaximalLoad"></span></h4>
+          <h4>Vehicles capacity : <div id="QteMaxVehicule"></div> <span id="QteMaxVehiculeValue">2</span></h4>
+          <h4>Clients number : <span id="ClientsNumber"></span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+  <script src="./tuto.js"></script>
+  <script src="./graph.js"></script>
+  <script src="./FormulaireNode.js"></script>
+  <script src="./affichageSolutions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
+
+
+
+</body>
+</html>
